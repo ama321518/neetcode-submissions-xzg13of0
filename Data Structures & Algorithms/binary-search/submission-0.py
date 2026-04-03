@@ -1,0 +1,22 @@
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        left = 0
+        right = len(nums)-1
+
+        while left<=right:#even when equal because there's still one valid element left to check
+            mid = (left+right)//2#divide n conquer step
+            if nums[mid] == target:
+                return mid
+            elif nums[mid]< target:
+                left = mid + 1
+            else:
+                nums[mid] > target
+                right = mid - 1
+        return -1
+                
+
+            
+
+
+
+        
